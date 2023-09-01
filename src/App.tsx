@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import './App.css';
+import Router from './Router';
 
-function App() {
+const App : FC = () => {
+
+  const [queryclient] = useState(
+    ()=>
+      new QueryClient ({
+        defaultOptions :{
+          queries :{
+            refetchOnWindowFocus : false,
+            retry : 0
+          },
+        },
+      })
+  );
+    
   return (
-    <div className="App">
-
-    </div>
+    <RecoilRoot>
+      <QueryClientProvider client = {queryclient}>
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+      </QueryClientProvider>
+    </RecoilRoot>
   );
 }
 

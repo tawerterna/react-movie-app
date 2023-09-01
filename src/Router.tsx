@@ -12,3 +12,5 @@ const Router : FC = (props) => {
         </div>
     )
 }
+
+export default Router;

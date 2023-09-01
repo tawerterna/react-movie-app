@@ -15,7 +15,9 @@ class HomeContainer extends Component<{}, HomeContainerProps>{
             loading : true,
         };
     }
-    rander(){
-        return <HomePresenter {...this.state}></HomePresenter>
+    render() {
+        return <HomePresenter {...this.state} />;
+      }
     }
-}
+    
+    export default HomeContainer;
