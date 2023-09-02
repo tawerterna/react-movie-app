@@ -26,7 +26,7 @@ const ScreenHeader : FC<ScreenHeaderProps> = ({
             <li className={`${styles.li} ${pathname.includes('/movie') && styles.current}`}>
                 <Link to = "/movie" className = {`${styles.scLink}
                 ${pathname.includes('/movie') && styles.current} `}>
-                영희
+                영화
                 </Link>
             </li>
             </ul>
