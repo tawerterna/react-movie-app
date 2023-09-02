@@ -8,6 +8,7 @@ const REST_API_ADDR = axios.create({
     baseURL : "https://api.themoviedb.org/3/",
     params : {
         language : "KO-KR",
+        api_key : "bad5f4adf7a24590ddf96f1d3456c6bb"
     },
 });
 
