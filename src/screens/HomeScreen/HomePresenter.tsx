@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Loader from "../../components/Loder/Loder";
 
 interface HomeProps {
     movieDetail : any;
@@ -10,7 +11,9 @@ const HomePresenter : React.FC<HomeProps> = ({
 movieDetail,
 loading
 }) => {
-    return (
+    return loading? (
+        <Loader></Loader>
+    ) :  (
         <div>홈</div>
     )
 }
