@@ -10,7 +10,7 @@ interface MovieContainerState {
     error: string | null;
     loading: boolean;
     popularInfinite: any[] | null;
-    nowPlayingIntinite: any[] | null;
+    nowPlayingInfinite: any[] | null;
     upcomingInfinite: any[] | null;
     topRatedInfinite: any[] | null;
 
@@ -27,7 +27,7 @@ class MovieContainer extends Component<{}, MovieContainerState>{
         error : null,
         loading : true,
         popularInfinite : null,
-        nowPlayingIntinite : null,
+        nowPlayingInfinite : null,
         upcomingInfinite : null,
         topRatedInfinite : null
     }
@@ -39,7 +39,7 @@ class MovieContainer extends Component<{}, MovieContainerState>{
             const{ data : {results : popular}} = await moviesApi.popular();
             const{ data : {results : topRated}} = await moviesApi.topRated();
             const{ data : {results : popularInfinite}} = await moviesApi.popularInfinite();
-            const{ data : {results : nowPlayingIntinite}} = await moviesApi.nowPlayingInfinite();
+            const{ data : {results : nowPlayingInfinite}} = await moviesApi.nowPlayingInfinite();
             const{ data : {results : upcomingInfinite}} = await moviesApi.upcomingInfinite();
             const{ data : {results : topRatedInfinite}} = await moviesApi.topRatedInfinite();
 
@@ -49,7 +49,7 @@ class MovieContainer extends Component<{}, MovieContainerState>{
                 popular,
                 topRated,
                 popularInfinite,
-                nowPlayingIntinite,
+                nowPlayingInfinite,
                 upcomingInfinite,
                 topRatedInfinite
             });
