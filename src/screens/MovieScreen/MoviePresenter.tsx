@@ -50,7 +50,6 @@ const MoviePresenter : React.FC<MovieContainerProps>=({
     const [topRatedMovies, settopRatedMovies] = useState<any[]>([]);
 
     const page = useInfiniteScroll();
-
     const getInfiniteApi = async() : Promise<void> => {
       if(page !== 1){
         try{
